@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteka për Fëmijë</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .menu {
+            margin: 30px auto;
+            max-width: 600px;
+        }
+        
+        .genre {
+            margin-bottom: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .genre-title {
+            font-weight: bold;
+            padding: 12px 15px;
+            background-color: #81d4fa;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .genre-title:hover {
+            background-color: #4fc3f7;
+        }
+        
+        .books-list {
+            display: none;
+            padding: 10px 15px;
+            background-color: white;
+        }
+        
+        .book-link {
+            display: block;
+            padding: 8px 5px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+        
+        .book-link:last-child {
+            border-bottom: none;
+        }
+        
+        .book-link:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .speaker-icon {
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 1.2em;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .menu {
+                margin: 20px auto;
+            }
+            
+            .genre-title {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Biblioteka për Fëmijë</h1>
+        </div>
+        
+        <div class="menu">
+            <!-- Përralla dhe Aventura -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🧚 Përralla dhe Aventura</span>
+                    <span class="speaker-icon" onclick="playAudio('Kazky_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="books/enot_intro.html" class="book-link">Përralla për Ariun</a>
+                    <a href="2_Ivan_Adventure.html" class="book-link">Tregim për Ivanin</a>
+                    <a href="3_Dragon_Tale.html" class="book-link">Për dragun Flik</a>
+                    <a href="4_Time_Journey.html" class="book-link">Udhëtim në Kohë</a>
+                    <a href="5_Emotions_Tale.html" class="book-link">Përralla për Emocionet</a>
+                </div>
+            </div>
+
+            <!-- Psikologjia -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🧠 Psikologjia</span>
+                    <span class="speaker-icon" onclick="playAudio('Psyhology_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="6_Emotions_Guide.html" class="book-link">Si të kuptojmë emocionet tona</a>
+                    <a href="7_Trust_Story.html" class="book-link">Histori për Besimin</a>
+                    <a href="8_Boundaries_Tale.html" class="book-link">Kufijtë dhe Rregullat</a>
+                    <a href="9_Anger_Management.html" class="book-link">Si të përballhemi me zemërimin</a>
+                    <a href="10_Friendship_Story.html" class="book-link">Miqësia e Vërtetë</a>
+                </div>
+            </div>
+
+            <!-- Shëndeti -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>💪 Shëndeti</span>
+                    <span class="speaker-icon" onclick="playAudio('Health_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="11_Vitamins_Story.html" class="book-link">Pse janë të rëndësishme vitaminat</a>
+                    <a href="12_Sleep_Importance.html" class="book-link">Fuqia magjike e gjumit</a>
+                    <a href="13_Movement_Guide.html" class="book-link">Lëvizja - është shëndet</a>
+                    <a href="14_Brain_Work.html" class="book-link">Si funksionon truri ynë</a>
+                    <a href="15_Healthy_Food.html" class="book-link">Ushqimi i shëndetshëm - superfuqi</a>
+                </div>
+            </div>
+
+            <!-- Politika dhe Bota -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🌍 Politika dhe Bota</span>
+                    <span class="speaker-icon" onclick="playAudio('Politics_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="16_What_Are_News.html" class="book-link">Çfarë janë lajmet</a>
+                    <a href="17_Leaders_Story.html" class="book-link">Kush janë liderët</a>
+                    <a href="18_Laws_For_Kids.html" class="book-link">Ligjet për fëmijë</a>
+                    <a href="19_Peace_Story.html" class="book-link">Lufta dhe Paqja</a>
+                </div>
+            </div>
+
+            <!-- Shkenca -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🔬 Shkenca</span>
+                    <span class="speaker-icon" onclick="playAudio('Science_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="20_Physics_For_Kids.html" class="book-link">Fizikë interesante</a>
+                    <a href="21_Micro_World.html" class="book-link">Bota e mahnitshme mikroskopike</a>
+                    <a href="22_Biology_Basics.html" class="book-link">Bazat e biologjisë</a>
+                    <a href="23_Space_Adventure.html" class="book-link">Udhëtim në Hapësirë</a>
+                    <a href="24_Technology_Today.html" class="book-link">Teknologjitë moderne</a>
+                </div>
+            </div>
+
+            <!-- Historia -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🏺 Historia</span>
+                    <span class="speaker-icon" onclick="playAudio('History_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="25_Ukraine_History.html" class="book-link">Historia e Shqipërisë</a>
+                    <a href="26_World_Events.html" class="book-link">Ngjarje të rëndësishme botërore</a>
+                    <a href="27_Living_History.html" class="book-link">Histori të gjalla</a>
+                </div>
+            </div>
+
+            <!-- Sporti -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>⚽ Sporti</span>
+                    <span class="speaker-icon" onclick="playAudio('Sport_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="28_Champions_Story.html" class="book-link">Histori të kampionëve</a>
+                    <a href="29_Team_Work.html" class="book-link">Loja e ekipit</a>
+                    <a href="30_Sport_Tactics.html" class="book-link">Taktikat sportive</a>
+                    <a href="31_Football_Basics.html" class="book-link">Bazat e futbollit</a>
+                </div>
+            </div>
+
+            <!-- Biznesi dhe Paratë -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>💰 Biznesi dhe Paratë</span>
+                    <span class="speaker-icon" onclick="playAudio('Business_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="32_Money_Story.html" class="book-link">Çfarë janë paratë</a>
+                    <a href="33_Bank_Work.html" class="book-link">Si funksionon banka</a>
+                    <a href="34_My_Business.html" class="book-link">Biznesi im i parë</a>
+                    <a href="35_Advertising_Guide.html" class="book-link">Çfarë është reklama</a>
+                </div>
+            </div>
+
+            <!-- Projektet dhe Idetë -->
+            <div class="genre">
+                <div class="genre-title">
+                    <span>🛠️ Projektet dhe Idetë</span>
+                    <span class="speaker-icon" onclick="playAudio('Projects_button.mp3')">🔊</span>
+                </div>
+                <div class="books-list">
+                    <a href="36_Create_Something.html" class="book-link">Si të krijojmë diçka të re</a>
+                    <a href="37_Inspiration_Story.html" class="book-link">Histori frymëzuese</a>
+                    <a href="38_Planning_Guide.html" class="book-link">Bazat e planifikimit</a>
+                    <a href="39_Success_Story.html" class="book-link">Çfarë është suksesi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script>
+        // Zgjerimi i listës së librave sipas zhanrit
+        const genreTitles = document.querySelectorAll('.genre-title');
+        genreTitles.forEach(title => {
+            title.addEventListener('click', function(e) {
+                // Nëse klikohet në ikonën e altoparlantit - mos zgjeroni menunë
+                if (!e.target.classList.contains('speaker-icon')) {
+                    const list = this.nextElementSibling;
+                    list.style.display = list.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+
+        // Funksioni për luajtjen e audios
+        function playAudio(audioFile) {
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = audioFile;
+            audioPlayer.play();
+            
+            // Ndalo audion e mëparshëm kur klikohet një buton i ri
+            audioPlayer.addEventListener('play', function() {
+                document.querySelectorAll('audio').forEach(a => {
+                    if (a !== audioPlayer) a.pause();
+                });
+            });
+        }
+    </script>
+</body>
+</html>
