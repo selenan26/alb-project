@@ -1,1 +1,380 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <title>Përralla për Ariun. Hyrje</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    .highlight {
+      background-color: #FFF59D;
+      transition: background-color 0.3s;
+    }
+    #story {
+      padding-bottom: 70px;
+    }
+    #story span {
+      display: inline-block;
+      margin: 2px 0;
+      padding: 2px 4px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .audio-wrapper {
+      position: sticky;
+      top: 0;
+      background-color: #f9f9f9;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      border-bottom: 1px solid #ccc;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .dark-mode h1 {
+      color: #81d4fa;
+    }
+    .dark-mode #story span {
+      color: #ffffff;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .theme-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+    #darkBtn {
+      background-color: #f0f0f0;
+    }
+    #lightBtn {
+      background-color: transparent;
+    }
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 8px 0;
+      background: #fff;
+      border-top: 1px solid #ccc;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      z-index: 100;
+    }
+    .pages {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      max-width: 80vw;
+      scrollbar-width: none;
+    }
+    .pages::-webkit-scrollbar {
+      display: none;
+    }
+    .pagination a, .pagination button {
+      min-width: 40px;
+      min-height: 40px;
+      font-size: 1.2em;
+      background: #f5f5f5;
+      border: none;
+      color: #888;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .pagination a:hover, .pagination button:hover {
+      background: #e6f0fa;
+    }
+    .pagination a.home {
+      font-size: 1.3em;
+      border-radius: 50%;
+    }
+    .pagination button.arrow {
+      background: #4a90e2;
+      color: #fff;
+      font-weight: bold;
+    }
+    .pagination button:disabled {
+      background: #ddd;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body class="">
+  <div class="theme-toggle">
+    <button id="darkBtn" class="theme-btn">🌙</button>
+    <button id="lightBtn" class="theme-btn">☀️</button>
+  </div>
 
+  <div class="audio-wrapper">
+    <audio id="audioPlayer" controls>
+      <source src="https://ia601502.us.archive.org/21/items/enot_introV4/enot_introV4.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <h1>Përralla për Ariun. Hyrje</h1>
+  <div id="story">
+    <img id="storyImage" src="https://archive.org/download/intro_enot/intro_enot.png" onclick="toggleImageSize()" style="max-width: 25%; cursor: pointer;">
+<span data-start="0.0">Në</span>  
+<span data-start="1.32">zemrën</span>  
+<span data-start="1.74">e</span>  
+<span data-start="2.4">pyllit</span>  
+<span data-start="3.08">magjik,</span>  
+<span data-start="3.86">midis</span>  
+<span data-start="4.56">pemëve</span>  
+<span data-start="5.08">që</span>  
+<span data-start="5.22">dinë</span>  
+<span data-start="5.46">të pëshpëritin,</span>  
+<span data-start="6.24">dhe</span>  
+<span data-start="6.66">shtigjeve</span>  
+<span data-start="7.42">që</span>  
+<span data-start="7.66">çojnë</span>  
+<span data-start="8.06">vetëm</span>  
+<span data-start="8.36">ata</span>  
+<span data-start="9.12">që</span>  
+<span data-start="9.34">besojnë</span>  
+<span data-start="9.78">në</span>  
+<span data-start="9.82">çudi,</span>  
+<span data-start="10.88">jetonte</span>  
+<span data-start="11.2">një</span>  
+<span data-start="11.6">ari</span>  
+<span data-start="12.26">i vogël</span>  
+<span data-start="12.76">me</span>  
+<span data-start="13.04">emrin</span>  
+<span data-start="15.02">Maks.</span>  
+<span data-start="15.12">Në</span>  
+<span data-start="15.64">qendër</span>  
+<span data-start="15.88">të</span>  
+<span data-start="16.46">këtij</span>  
+<span data-start="16.96">pylli</span>  
+<span data-start="17.72">për</span>  
+<span data-start="18.6">shumë</span>  
+<span data-start="19.16">breza</span>  
+<span data-start="20.42">ndriçonte</span>  
+<span data-start="20.82">Guri</span>  
+<span data-start="21.62">i</span>  
+<span data-start="21.74">Dritës</span>  
+<span data-start="22.24">—</span>  
+<span data-start="22.7">një</span>  
+<span data-start="23.68">amulet</span>  
+<span data-start="23.78">e lashtë</span>  
+<span data-start="24.32">që</span>  
+<span data-start="24.78">i</span>  
+<span data-start="25.46">zmbrapti</span>  
+<span data-start="26.54">frymët</span>  
+<span data-start="27.16">e këqija</span>  
+<span data-start="28.54">dhe</span>  
+<span data-start="28.6">mbronte</span>  
+<span data-start="29.34">të</span>  
+<span data-start="29.44">gjithë</span>  
+<span data-start="30.32">banorët.</span>  
+<span data-start="30.4">Ai</span>  
+<span data-start="31.12">ndihmonte</span>  
+<span data-start="32.02">udhëtarët</span>  
+<span data-start="32.18">të</span>  
+<span data-start="33.58">mos</span>  
+<span data-start="33.92">humbnin</span>  
+<span data-start="34.32">natën,</span>  
+<span data-start="34.78">dhe</span>  
+<span data-start="35.56">miqtë</span>  
+<span data-start="36.76">të</span>  
+<span data-start="37.34">gjenin</span>  
+<span data-start="38.98">të</span>  
+<span data-start="39.56">kuptuarit.</span>  
+<span data-start="39.88">Por</span>  
+<span data-start="41.4">një</span>  
+<span data-start="41.48">ditë,</span>  
+<span data-start="42.08">Guri</span>  
+<span data-start="42.6">u</span>  
+<span data-start="43.76">zhduk.</span>  
+<span data-start="43.84">Pylli</span>  
+<span data-start="44.54">dukej</span>  
+<span data-start="45.24">se</span>  
+<span data-start="46.18">ndryshoi:</span>  
+<span data-start="46.56">shtigjet</span>  
+<span data-start="48.38">u</span>  
+<span data-start="48.88">bënë</span>  
+<span data-start="49.42">të</span>  
+<span data-start="49.58">ndërlikuara,</span>  
+<span data-start="49.72">u</span>  
+<span data-start="50.1">shfaqën</span>  
+<span data-start="50.42">zhurma</span>  
+<span data-start="51.14">të</span>  
+<span data-start="51.36">çuditshme,</span>  
+<span data-start="51.82">dhe</span>  
+<span data-start="53.44">kafshët</span>  
+<span data-start="54.94">filluan</span>  
+<span data-start="55.6">të</span>  
+<span data-start="55.8">grinden</span>  
+<span data-start="56.32">për</span>  
+<span data-start="56.74">gjëra</span>  
+<span data-start="57.74">të</span>  
+<span data-start="57.84">vogla.</span>  
+<span data-start="58.4">Disa</span>  
+<span data-start="58.68">thonin</span>  
+<span data-start="59.1">se</span>  
+<span data-start="59.58">ishte</span>  
+<span data-start="59.86">rastësi.</span>  
+<span data-start="60.52">Por</span>  
+<span data-start="61.14">Maks</span>  
+<span data-start="62.44">e</span>  
+<span data-start="63.22">dinte</span>  
+<span data-start="63.42">—</span>  
+<span data-start="64.06">ky</span>  
+<span data-start="64.44">ishte</span>  
+<span data-start="64.88">një</span>  
+<span data-start="65.84">shenjë.</span>  
+<span data-start="66.14">Ariu</span>  
+<span data-start="66.46">i</span>  
+<span data-start="68.08">vogël</span>  
+<span data-start="68.2">por</span>  
+<span data-start="68.4">i</span>  
+<span data-start="69.16">guximshëm</span>  
+<span data-start="69.36">vendosi</span>  
+<span data-start="70.0">se</span>  
+<span data-start="70.2">dikush</span>  
+<span data-start="70.4">duhet</span>  
+<span data-start="71.0">të</span>  
+<span data-start="71.2">gjejë</span>  
+<span data-start="71.6">Gurin</span>  
+<span data-start="72.0">dhe</span>  
+<span data-start="72.4">të</span>  
+<span data-start="72.8">kthejë</span>  
+<span data-start="73.2">dritën</span>  
+<span data-start="73.6">në</span>  
+<span data-start="74.0">pyll.</span>  
+<span data-start="74.4">Sepse</span>  
+<span data-start="75.2">edhe</span>  
+<span data-start="75.6">më</span>  
+<span data-start="76.0">të</span>  
+<span data-start="76.4">voglët</span>  
+<span data-start="76.8">mund</span>  
+<span data-start="77.2">të</span>  
+<span data-start="77.6">ndryshojnë</span>  
+<span data-start="78.0">botën,</span>  
+<span data-start="78.4">nëse</span>  
+<span data-start="78.8">përpiqen</span>  
+<span data-start="79.2">shumë.</span>  
+<span data-start="79.6">Dhe</span>  
+<span data-start="80.0">kështu</span>  
+<span data-start="80.4">filloi</span>  
+<span data-start="80.8">aventura</span>  
+<span data-start="81.2">e</span>  
+<span data-start="81.6">tij...</span>  
+
+  <div class="pagination">
+  <a href="../index.html" class="home">🏠</a>
+  <button class="arrow prev" disabled>&lt;</button>
+  <div class="pages">
+    <a href="enot_intro.html">0</a>
+    <a href="enot_day1.html">1</a>
+    <a href="enot_day2.html">2</a>
+    <a href="enot_day3.html">3</a>
+    <a href="enot_day4.html">4</a>
+    <a href="enot_day5.html">5</a>
+    <a href="enot_day6.html">6</a>
+    <span>…</span>
+    <a href="enot_day10.html">10</a>
+  </div>
+
+    <button class="arrow next">&gt;</button>
+  </div>
+
+  <script>
+    // Temat
+    const darkBtn = document.getElementById('darkBtn');
+    const lightBtn = document.getElementById('lightBtn');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+    }
+
+    darkBtn.addEventListener('click', () => {
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    });
+
+    lightBtn.addEventListener('click', () => {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    });
+
+    // Audio dhe theksimi
+    const audio = document.getElementById('audioPlayer');
+    const textSpans = document.querySelectorAll('#story span');
+
+    function playFromTime(startTime) {
+      audio.currentTime = startTime;
+      audio.play();
+    }
+
+    audio.addEventListener('timeupdate', () => {
+      const currentTime = audio.currentTime;
+      textSpans.forEach(span => {
+        const startTime = parseFloat(span.getAttribute('data-start'));
+        const endTime = startTime + 0.5; // Kohë e shkurtër theksimi
+        if (currentTime >= startTime && currentTime < endTime) {
+          span.classList.add('highlight');
+        } else {
+          span.classList.remove('highlight');
+        }
+      });
+    });
+
+    textSpans.forEach(span => {
+      const startTime = parseFloat(span.getAttribute('data-start'));
+      span.addEventListener('click', () => {
+        playFromTime(startTime);
+      });
+      span.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        playFromTime(startTime);
+      });
+    });
+
+    // Imazhi
+    function toggleImageSize() {
+      const img = document.getElementById("storyImage");
+      img.style.maxWidth = img.style.maxWidth === "100%" ? "25%" : "100%";
+    }
+
+    // Paginimi
+    const pages = document.querySelector('.pages');
+    const prevBtn = document.querySelector('.arrow.prev');
+    const nextBtn = document.querySelector('.arrow.next');
+
+    prevBtn.onclick = () => pages.scrollBy({left: -80, behavior: 'smooth'});
+    nextBtn.onclick = () => pages.scrollBy({left: 80, behavior: 'smooth'});
+
+    pages.addEventListener('scroll', () => {
+      prevBtn.disabled = pages.scrollLeft <= 0;
+      nextBtn.disabled = pages.scrollLeft + pages.offsetWidth >= pages.scrollWidth;
+    });
+  </script>
+</body>
+</html>
